@@ -4,7 +4,7 @@
 
 This is a simple and quick practice carried out with Angular 17 using Signals to list, edit, and delete a task. It also includes the new flow control with Template syntax. Bootswatch styles have also been added from https://github.com/thomaspark/bootswatch
 
-You can view the app by clicking on this link.
+[You can view the app by clicking on this link.](https://main.d34oh05vmlnr5l.amplifyapp.com/)
 
 
 <img src="./src/assets/ToDoList.png" alt="imagen todo app">
