@@ -1,0 +1,51 @@
+<div class="col-lg-3 col-11 card mx-auto mt-5 text-center shadow-lg bg-primary">
+  <h1 class="bg-dark text-light p-2">To Do List ✓</h1>
+
+  <div class="input-group mb-1 p-3">
+    <input
+      type="text"
+      [formControl]="taskInput"
+      class="form-control fs-5"
+      placeholder="Añada una tarea"
+      aria-label="Añada una tarea"
+      aria-describedby="button-addon2"
+      (keydown.enter)="addTask()"
+    />
+    <button
+      class="btn btn-outline-success"
+      type="button"
+      id="button-addon2"
+      (click)="addTask()"
+    >
+      ➕
+    </button>
+  </div>
+
+  <ul class="list-group list-group-numbered mx-4 mt-2 mb-4">
+    @for(todo of listTask() ; track todo.id){
+
+    <li class="list-group-item text-start">
+      @if(todo.done){
+      <del>{{ todo.title }}</del>
+      } @else {
+      {{ todo.title }}
+      }
+
+      <button
+        class="btn btn-danger btn-sm float-end"
+        (click)="deleteTask(todo.id)"
+      >
+        ✖️
+      </button>
+      <button
+        class="btn btn-warning btn-sm float-end mx-2"
+        (click)="doneTask(todo.id)"
+      >
+        ✔️
+      </button>
+    </li>
+
+    }
+  </ul>
+</div>
+
